@@ -47,6 +47,14 @@ public class Product {
         return this.productQuantity;
     }
 
+    public int getProductId() {
+        return this.productId;
+    }
+
+    public double getProductWeight() {
+        return this.productWeight;
+    }
+
 //    Mutator Methods
 
     public void setProductName(String productName) {
@@ -59,6 +67,14 @@ public class Product {
 
     public void setProductQuantity(int productQuantity) {
         this.productQuantity = productQuantity;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public void setProductWeight(double productWeight) {
+        this.productWeight = productWeight;
     }
 
 //    The toString method
