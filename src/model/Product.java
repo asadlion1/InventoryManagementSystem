@@ -6,6 +6,9 @@ public class Product {
     private String productName; // Product Name
     private double productPrice; // Product Price
     private int productQuantity; // The quantity of Product
+    private int productId;
+    private double productWeight;
+    private boolean overweight;
 
 //    The overloaded constructor
     public Product(String productName, double productPrice, int productQuantity) {
@@ -14,6 +17,22 @@ public class Product {
         this.productQuantity = productQuantity;
 
     }
+
+    public Product(String productName, double productPrice, int productQuantity, int productId, double productWeight) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productQuantity = productQuantity;
+        this.productId = productId;
+        this.productWeight = productWeight;
+    }
+
+
+    //    Default Constructor (For Testing)
+    public Product() {
+
+    }
+
+
 
 //    Accessor Methods
     public String getProductName() {
@@ -28,12 +47,27 @@ public class Product {
         return this.productQuantity;
     }
 
+//    Mutator Methods
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public void setProductQuantity(int productQuantity) {
+        this.productQuantity = productQuantity;
+    }
 
 //    The toString method
+    @Override
     public String toString() {
-        String s = String.format("Product Name: %s /n Product Price: %d /n Product Quantity: %d", this.productName, this.productPrice, this.productQuantity);
-        return s;
+        return String.format("Product Name: %s\nProduct Price: %.2f\nProduct Quantity: %d",
+            this.productName, this.productPrice, this.productQuantity);
     }
+
 
 
 
