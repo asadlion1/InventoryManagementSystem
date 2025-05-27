@@ -1,5 +1,5 @@
 package model;
-// Engineered by Asad Murad ***
+// Engineered by Asad Murad - Computer Engineering ***
 
 public class Product {
 //    The instance variables
@@ -16,6 +16,11 @@ public class Product {
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
 
+    }
+
+    public Product(String productName, double productPrice) {
+        this.productName = productName;
+        this.productPrice = productPrice;
     }
 
     public Product(String productName, double productPrice, int productQuantity, int productId, double productWeight) {
